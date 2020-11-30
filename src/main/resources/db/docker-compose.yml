@@ -1,0 +1,10 @@
+postgres:
+    image: postgres:9.4
+    ports:
+        - "5432:5432"
+    environment:
+        - POSTGRES_USER=newys
+        - POSTGRES_PASSWORD=N3wys
+        - POSTGRES_DB=newys_db
+    volumes:
+        - ./scripts:/docker-entrypoint-initdb.d/
